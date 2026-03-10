@@ -47,6 +47,6 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
   Save and exit
 
   Enable and start
-sudo systemctl daemon-reload
-sudo systemctl enable bt-rfid.service
-sudo systemctl start bt-rfid.service
+- sudo systemctl daemon-reload
+- sudo systemctl enable bt-rfid.service
+- sudo systemctl start bt-rfid.service
