@@ -19,6 +19,7 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 How to install 
 # Download files named 
 - bt_rfid.py in Main addon folder
+- btrfid.service.txt file
 - pn532_i2c.py and main.py in Send to pico folder
 
 Edit bt_rfid.py 
@@ -42,24 +43,10 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
   Create a service
   
   - sudo nano /etc/systemd/system/bt-rfid.service
-  Paste everything from here
-# - Paste
-[Unit]
-Description=Box Turtle RFID / NFC bridge
-After=network-online.target
-Wants=network-online.target
+  - Paste everything from btrfid.service.txt file
+  Save and exit
 
-[Service]
-Type=simple
-User=pi
-WorkingDirectory=/home/pi
-ExecStart=/usr/bin/python3 /home/pi/bt_rfid.py
-Restart=always
-RestartSec=2
-Environment=PYTHONUNBUFFERED=1
-
-[Install]
-WantedBy=multi-user.target
-# -  End
-  
-  
+  Enable and start
+sudo systemctl daemon-reload
+sudo systemctl enable bt-rfid.service
+sudo systemctl start bt-rfid.service
