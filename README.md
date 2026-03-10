@@ -6,7 +6,8 @@ BOM
 Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't work with 1.0 without mods
 
 - 1 PN532 Reader per lane
-- 1 4 or 8 I2C mux for PICO for splitting PN532 Reader adresses because Rfid module PN532 have same I2C adress
+- 1 4 or 8 I2C mux for PICO for splitting PN532 Reader adresses and better wiring
+
 - 1 RPI Pico flashed in micropython
   Here link how to do it, https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
   
