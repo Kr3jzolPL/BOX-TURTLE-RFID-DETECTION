@@ -3,6 +3,7 @@ This addon add option for box turtle to have RFID Detection in each lane using P
 It uses avaiable port on BTIO for passing USB connection to the Rpi Pico for clean setup
 
 BOM
+- Box Turtle 1.1 Trays
 - 1 PN532 Reader per lane
 - 1 4 or 8 mux for PICO
 - 1 RPI Pico flashed in micropython
