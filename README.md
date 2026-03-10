@@ -40,9 +40,10 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
   You will need to add a rule to execute this module every restart otherwise you will need to turn it manually each time
   How to do it :
   Create a service
-  sudo nano /etc/systemd/system/bt-rfid.service
+  
+  - sudo nano /etc/systemd/system/bt-rfid.service
   Paste everything from here
-  #-
+# - Paste
   [Unit]
 Description=Box Turtle RFID / NFC bridge
 After=network-online.target
@@ -59,6 +60,6 @@ Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target
-#- 
+# -  End
   
   
