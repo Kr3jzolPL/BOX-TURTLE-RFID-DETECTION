@@ -17,13 +17,18 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 - Type C to Type C or micro cable depends of your pico 
 
 How to install 
+# Download files named 
+- bt_rfid.py in Main addon folder
+- pn532_i2c.py and main.py in Send to pico folder
 
-Download file named bt_rfid.py
-
-edit it and only edit these lines 
-
+ 
+Edit bt_rfid.py 
 # ---------------- CONFIG ----------------
 PICO_PORT = "/dev/ttyACM4"          # <-- adjust port for your pi
 BAUD = 115200
 
+The pico port can be find in your printer settings just like in photo
+
 SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress 
+
+Send it to root folder of rpi same as in photo 
