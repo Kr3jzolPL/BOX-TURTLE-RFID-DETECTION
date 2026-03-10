@@ -22,7 +22,7 @@ Download file named bt_rfid.py
 
 edit it and only edit these lines 
 
----------------- CONFIG ----------------
+- ---------------- CONFIG ----------------
 PICO_PORT = "/dev/ttyACM4"          # <-- adjust port for your pi
 BAUD = 115200
 
