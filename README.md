@@ -44,7 +44,7 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
   - sudo nano /etc/systemd/system/bt-rfid.service
   Paste everything from here
 # - Paste
-  [Unit]
+[Unit]
 Description=Box Turtle RFID / NFC bridge
 After=network-online.target
 Wants=network-online.target
