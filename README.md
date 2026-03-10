@@ -30,4 +30,35 @@ The pico port can be find in your printer settings just like in photo
 
 SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress 
 
-Send it to root folder of rpi same as in photo 
+- Send it to root folder of rpi same as in photo 
+
+- After you did all the steps you will need to ssh to your pi, you can use putty same as me
+- When you are connected to your printer you will need to add that service to startup and execute it using
+
+  python3 ~/bt_rfid.py , the module should work now
+
+  You will need to add a rule to execute this module every restart otherwise you will need to turn it manually each time
+  How to do it :
+  Create a service
+  sudo nano /etc/systemd/system/bt-rfid.service
+  Paste everything from here
+  #-
+  [Unit]
+Description=Box Turtle RFID / NFC bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python3 /home/pi/bt_rfid.py
+Restart=always
+RestartSec=2
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+#- 
+  
+  
