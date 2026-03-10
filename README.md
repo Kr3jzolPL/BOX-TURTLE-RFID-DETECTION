@@ -21,7 +21,6 @@ How to install
 - bt_rfid.py in Main addon folder
 - pn532_i2c.py and main.py in Send to pico folder
 
- 
 Edit bt_rfid.py 
 # ---------------- CONFIG ----------------
 PICO_PORT = "/dev/ttyACM4"          # <-- adjust port for your pi
