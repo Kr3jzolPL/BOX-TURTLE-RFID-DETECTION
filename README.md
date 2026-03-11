@@ -125,4 +125,8 @@ Then each time you will pass your tag the spool will be assigned to lane
 
 # -- Assembly section -- 
 
-Mount the mux in middle of trays, you can use motor mount for mounting 1 screw but if your wires are longer than mine just fix it directly on extrusion 
+Mount the mux in middle of trays, you can use motor mount for mounting 1 screw but if your wires are longer than mine just fix it directly on extrusion, as before connect mux to rpi pico and rpi pico in type c port in BTIO for clean wiring ( Works if you are using CAN not USB for BoxTurtle Motherboard ) , then connect your box turtle as usual and add type c cable from your printer to BTIO type C connector 
+
+![20260207_014407](https://github.com/user-attachments/assets/64413500-62c5-46ce-b456-8d55e8395ee2)
+
+Check if everything works by inserting the spool with tag 
