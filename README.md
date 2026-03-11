@@ -14,9 +14,12 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
   Here link how to do it, https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
   
 - Wires
-- Type C to Type C or micro cable depends of your pico 
+- Type C to Type C or micro cable depends of your pico
 
-How to install 
+- First step: 
+- Connect pico to mux then pico to your rpi via usb
+
+
 # Download files named 
 - bt_rfid.py in Main addon folder
 - btrfid.service.txt file
@@ -120,3 +123,7 @@ When you will be adding your spool in spoolman search on bottom for that externa
 Here you will need to insert unique id assigned to nfc tag, to do just scan the tag even if not in database and copy the numbers from console in mainsail to that section to assign the "Tag" to that spool 
 
 Then each time you will pass your tag the spool will be assigned to lane 
+
+# -- Assembly section -- 
+
+Mount the mux in middle of trays, you can use motor mount for mounting 1 screw but if your wires are longer than mine just fix it directly on extrusion 
