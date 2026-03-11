@@ -20,6 +20,9 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
 Be sure to switch to I2C mode in your readers
 
+Check if your wires have enough length for each lane !
+
+
 <img width="421" height="435" alt="Screenshot_5" src="https://github.com/user-attachments/assets/60f162fb-ab93-44a7-98c5-fe1d8b696aa3" />
 
 Connect mux to pico I2C port then pico to rpi via usb
