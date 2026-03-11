@@ -16,7 +16,7 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 - Wires
 - Type C to Type C or micro cable depends of your pico
 
-- First step: 
+# First step: 
 - Connect pico to mux then pico to your rpi via usb
 
 
