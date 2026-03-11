@@ -41,12 +41,13 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
 - After you did all the steps you will need to ssh to your pi, you can use putty same as me
 - When you are connected to your printer you will need to add that service to startup and execute it using
 
-  python3 ~/bt_rfid.py , the module should work now
-
+  - python3 ~/bt_rfid.py
+  - the module should work now
 
   You will need to add a rule to execute this module every restart otherwise you will need to turn it manually each time
   - How to do it :
-  - Create a service using : sudo nano /etc/systemd/system/bt-rfid.service
+  - Create a service using :
+  - sudo nano /etc/systemd/system/bt-rfid.service
   - Paste everything from btrfid.service.txt file
   Save and exit
 
