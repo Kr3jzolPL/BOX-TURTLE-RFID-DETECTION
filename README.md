@@ -16,9 +16,13 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 - Wires
 - Type C to Type C or micro cable depends of your pico
 
-# First step: 
-- Connect pico to mux then pico to your rpi via usb
+# -- Wiring section -- 
+Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
+Be sure to switch to I2C mode in your readers
 
+<img width="421" height="435" alt="Screenshot_5" src="https://github.com/user-attachments/assets/60f162fb-ab93-44a7-98c5-fe1d8b696aa3" />
+
+Connect mux to pico I2C port then pico to rpi via usb
 
 # Download files named 
 - bt_rfid.py in Main addon folder
@@ -101,14 +105,6 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 
 Done, you have bind the pico to PICO_PORT = "/dev/pico-nfc", use it in bt_rfid.py if not done before
-
-# -- Wiring section -- 
-
-Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
-Be sure to switch to I2C mode in your readers
-
-<img width="421" height="435" alt="Screenshot_5" src="https://github.com/user-attachments/assets/60f162fb-ab93-44a7-98c5-fe1d8b696aa3" />
-
 
 # -- Spoolman Section -- 
 
