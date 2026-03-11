@@ -29,14 +29,20 @@ BAUD = 115200
 
 The pico port can be find in your printer settings just like in photo
 
+<img width="614" height="530" alt="Screenshot_1" src="https://github.com/user-attachments/assets/2aba368c-6f93-4eab-89f7-e32bff1c0d1f" />
+
 SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress 
 
 - Send it to root folder of rpi same as in photo 
+
+<img width="771" height="507" alt="Screenshot_2" src="https://github.com/user-attachments/assets/e4d5294e-633c-4ac1-8d67-385a5f1c80f2" />
+
 
 - After you did all the steps you will need to ssh to your pi, you can use putty same as me
 - When you are connected to your printer you will need to add that service to startup and execute it using
 
   python3 ~/bt_rfid.py , the module should work now
+
 
   You will need to add a rule to execute this module every restart otherwise you will need to turn it manually each time
   - How to do it :
