@@ -63,7 +63,7 @@ I have my pico in ACM4 port but your can be different so ajust for your setup
 - mpremote connect /dev/ttyACM4 fs cp main.py :main.py
 - mpremote connect /dev/ttyACM4 reset
 
-# ---Bind Pico to ttyACM4 port---
+# ---Bind Pico to pico-nfc port---
 1️⃣ Plug the Pico and find its current port
 ls /dev/ttyACM*
 
