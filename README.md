@@ -99,3 +99,24 @@ sudo udevadm trigger
 
 Done, you have bind the pico to PICO_PORT = "/dev/pico-nfc", use it in bt_rfid.py if not done before
 
+# -- Wiring section -- 
+
+Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
+Be sure to switch to I2C mode in your readers
+
+<img width="421" height="435" alt="Screenshot_5" src="https://github.com/user-attachments/assets/60f162fb-ab93-44a7-98c5-fe1d8b696aa3" />
+
+
+# -- Spoolman Section -- 
+
+In order to communicate with our pico you need to have database and extra section in each spool which is used by our pico 
+
+- To add you will need to add custom section in spoolman settings like in photo, the name need to be same as mine if not it will not work at all
+  <img width="1892" height="778" alt="Screenshot_3" src="https://github.com/user-attachments/assets/a788b8c6-d20b-45d8-b596-578bf9030e6c" />
+When you will be adding your spool in spoolman search on bottom for that external_id section
+
+<img width="1652" height="745" alt="Screenshot_4" src="https://github.com/user-attachments/assets/5bb9072c-72bd-4ab0-8895-de766be852e3" />
+
+Here you will need to insert unique id assigned to nfc tag, to do just scan the tag even if not in database and copy the numbers from console in mainsail to that section to assign the "Tag" to that spool 
+
+Then each time you will pass your tag the spool will be assigned to lane 
