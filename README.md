@@ -24,7 +24,7 @@ How to install
 
 Edit bt_rfid.py 
 # ---------------- CONFIG ----------------
-PICO_PORT = "/dev/ttyACM4"          # <-- adjust port for your pi
+PICO_PORT = "/dev/pico-nfc"          # <-- adjust port for your pi
 BAUD = 115200
 
 The pico port can be find in your printer settings just like in photo
@@ -55,3 +55,47 @@ SPOOLMAN = "http://192.168.1.39:7912"  # <-- adjust for your spoolman ip adress
 - sudo systemctl daemon-reload
 - sudo systemctl enable bt-rfid.service
 - sudo systemctl start bt-rfid.service
+
+After you did everything mentioned before now you can send main.py and i2c module using mpremote
+I have my pico in ACM4 port but your can be different so ajust for your setup
+
+- mpremote connect /dev/ttyACM4 fs cp pn532_i2c.py :pn532_i2c.py
+- mpremote connect /dev/ttyACM4 fs cp main.py :main.py
+- mpremote connect /dev/ttyACM4 reset
+
+#--- Bind Pico to ttyACM4 port ---
+1️⃣ Plug the Pico and find its current port
+ls /dev/ttyACM*
+
+Example output:
+
+/dev/ttyACM4
+2️⃣ Get Pico USB identifiers
+udevadm info -a -n /dev/ttyACM4 | grep '{idVendor}\|{idProduct}\|{serial}' -m3
+
+Example result:
+
+ATTRS{idVendor}=="2e8a"
+ATTRS{idProduct}=="0005"
+ATTRS{serial}=="4250304638303305"
+
+Those values identify the Raspberry Pi Pico.
+
+3️⃣ Create udev rule
+
+Open the rules file:
+
+sudo nano /etc/udev/rules.d/99-pico-nfc.rules
+
+Put exactly this (adjust serial if yours is different):
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005", ATTRS{serial}=="4250304638303305", SYMLINK+="pico-nfc"
+
+Save.
+
+4️⃣ Reload rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+Done, you have bind the pico to PICO_PORT = "/dev/pico-nfc", use it in bt_rfid.py if not done before
+
