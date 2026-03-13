@@ -21,7 +21,8 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 - Right side middle x3
 - Right side Right side x1
 - left side Right side x1
-
+- stemma multiplexer x8 for I2C mux
+- PiPicoScrew for pico mount
 # -- Wiring section -- 
 Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
 Be sure to switch to I2C mode in your readers
