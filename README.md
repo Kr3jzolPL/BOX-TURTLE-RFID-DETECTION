@@ -134,4 +134,6 @@ Insert each reader same as in photo between each lane
 
 Mount the mux in middle of trays, you can use motor mount for mounting 1 screw but if your wires are longer than mine just fix it directly on extrusion, as before connect mux to rpi pico and rpi pico in type c port in BTIO for clean wiring ( Works if you are using CAN not USB for BoxTurtle Motherboard ) , then connect your box turtle as usual and add type c cable from your printer to BTIO type C connector 
 
+
+
 Check if everything works by inserting the spool with tag 
