@@ -22,7 +22,11 @@ Be sure to switch to I2C mode in your readers
 
 Check if your wires have enough length for each lane !
 
-
+# ---------------- Printing ----------------
+Left side middle x3 
+Right side middle x3
+Right side Right side x1
+left side Right side x1
 <img width="421" height="435" alt="Screenshot_5" src="https://github.com/user-attachments/assets/60f162fb-ab93-44a7-98c5-fe1d8b696aa3" />
 
 Connect mux to pico I2C port then pico to rpi via usb
