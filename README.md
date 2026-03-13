@@ -139,3 +139,5 @@ Mount the mux in middle of trays, you can use motor mount for mounting 1 screw b
 <img width="1652" height="745" alt="Screenshot_4" src="https://github.com/Kr3jzolPL/BOX-TURTLE-RFID-DETECTION/blob/main/photos./20260312_144845.jpg" />
 
 Check if everything works by inserting the spool with tag 
+
+<img width="1652" height="745" alt="Screenshot_4" src="https://github.com/Kr3jzolPL/BOX-TURTLE-RFID-DETECTION/blob/main/photos./20260312_144815.jpg" />
