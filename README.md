@@ -17,10 +17,10 @@ Important, The mounts for rfid are only compatible Box Turtle 1.1 Trays, won't w
 - Type C to Type C or micro cable depends of your pico
 
 # ---------------- Printing ----------------
-Left side middle x3 
-Right side middle x3
-Right side Right side x1
-left side Right side x1
+- Left side middle x3 
+- Right side middle x3
+- Right side Right side x1
+- left side Right side x1
 
 # -- Wiring section -- 
 Connect readers in your mux, use port 0-1-2-3 on mux , the 4-5-6-7 ports if using 8 channel mux doesn't work so be aware
